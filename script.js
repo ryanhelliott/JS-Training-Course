@@ -334,3 +334,4 @@ if (johnAvg > mikeAvg && johnAvg > maryAvg) {
 
 
 //test git hub push
+//test fetch from git hub
