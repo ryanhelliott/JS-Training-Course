@@ -331,3 +331,6 @@ if (johnAvg > mikeAvg && johnAvg > maryAvg) {
 } else {
   console.log('Its a draw, everyone gets a trophy');
 }
+
+
+//test git hub push
