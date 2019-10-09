@@ -304,34 +304,105 @@ While Mikes team scored 116, 94, and 123 points.
   Keeping in mind there might be draws.
 */
 
-var johnAvg = (89 + 120 + 103) / 3;
-console.log('Johns Avg Score: ' + johnAvg);
-
-var mikeAvg = (89 + 120 + 103) / 3;
-console.log('Mike Avg Score: ' + mikeAvg);
-
-var maryAvg = (97 + 134 + 105) / 3;
-console.log('Mary Avg Score: ' + maryAvg);
-
-// if (mikeAvg > johnAvg) {
-//   console.log('Mike is the winner with an avg of: ' + mikeAvg);
-// } else if (mikeAvg < johnAvg) {
+// var johnAvg = (89 + 120 + 103) / 3;
+// console.log('Johns Avg Score: ' + johnAvg);
+//
+// var mikeAvg = (89 + 120 + 103) / 3;
+// console.log('Mike Avg Score: ' + mikeAvg);
+//
+// var maryAvg = (97 + 134 + 105) / 3;
+// console.log('Mary Avg Score: ' + maryAvg);
+//
+// // if (mikeAvg > johnAvg) {
+// //   console.log('Mike is the winner with an avg of: ' + mikeAvg);
+// // } else if (mikeAvg < johnAvg) {
+// //   console.log('John is the winner with an avg of: ' + johnAvg);
+// // } else {
+// //   console.log('Its a draw, everyone gets a trophy');
+// // }
+//
+// //note: this doesnt cover every single situation here. Only where there is a clear winner.
+// if (johnAvg > mikeAvg && johnAvg > maryAvg) {
 //   console.log('John is the winner with an avg of: ' + johnAvg);
+// } else if (mikeAvg > johnAvg && mikeAvg > maryAvg) {
+//   console.log('Mike is the winner with an avg of: ' + mikeAvg);
+// } else if (maryAvg > johnAvg && maryAvg > mikeAvg) {
+//   console.log('Mary is the winner with an avg of: ' + maryAvg);
 // } else {
 //   console.log('Its a draw, everyone gets a trophy');
 // }
 
-//note: this doesnt cover every single situation here. Only where there is a clear winner.
-if (johnAvg > mikeAvg && johnAvg > maryAvg) {
-  console.log('John is the winner with an avg of: ' + johnAvg);
-} else if (mikeAvg > johnAvg && mikeAvg > maryAvg) {
-  console.log('Mike is the winner with an avg of: ' + mikeAvg);
-} else if (maryAvg > johnAvg && maryAvg > mikeAvg) {
-  console.log('Mary is the winner with an avg of: ' + maryAvg);
-} else {
-  console.log('Its a draw, everyone gets a trophy');
+
+
+
+
+/*************************************************************
+* Functions
+*/
+
+// function calculateAge (birthYear) {
+//   return 2018 - birthYear;
+// }
+//
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1948);
+// var ageJane = calculateAge(1969);
+//
+// console.log(ageJohn,ageMike,ageJane );
+//
+//
+//
+// function yearsUntilRetirement(year, firstName) {
+//   var age = calculateAge(year);
+//   var retirement = 65 - age;
+//
+//  if (retirement > 0 ) {
+//      console.log(firstName + ' retires in ' + retirement + ' years.');
+//  } else {
+//         console.log(firstName + ' is already retired on the beach.');
+//  }
+// }
+//
+// yearsUntilRetirement(1990, 'John');
+// yearsUntilRetirement(1948, 'Mike');
+// yearsUntilRetirement(1969, 'Jane');
+
+
+
+
+/*************************************************************
+* Function statements and Expressions
+*/
+
+//function declaration
+// function whatDoYouDo (job, firstName){}
+
+
+//function expression
+var whatDoYouDo = function(job, firstName) {
+  switch(job) {
+    case 'teacher':
+      return firstName + ' teaches kids how to code';
+    case 'driver':
+      return firstName + ' drives a cab in Lisbon';
+    case 'designer':
+      return firstName + ' designs beautiful websites';
+    default:
+      return firstName + ' does something else';
+  }
 }
 
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
 
-//test git hub push
-//test fetch from git hub
+
+//statement vs expressions
+// expressions are peices of code that always return a single result
+// ex. 2+5 is an expression
+// the function call whatDoYouDo returns an expression
+// scoreJohn > scoreMike is an expressions
+
+// statements preform an action
+// do things but do not produce an immediate values
+// if else statements
