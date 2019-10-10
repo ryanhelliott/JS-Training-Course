@@ -379,22 +379,22 @@ While Mikes team scored 116, 94, and 123 points.
 
 
 //function expression
-var whatDoYouDo = function(job, firstName) {
-  switch(job) {
-    case 'teacher':
-      return firstName + ' teaches kids how to code';
-    case 'driver':
-      return firstName + ' drives a cab in Lisbon';
-    case 'designer':
-      return firstName + ' designs beautiful websites';
-    default:
-      return firstName + ' does something else';
-  }
-}
-
-console.log(whatDoYouDo('teacher', 'John'));
-console.log(whatDoYouDo('designer', 'Jane'));
-console.log(whatDoYouDo('retired', 'Mark'));
+// var whatDoYouDo = function(job, firstName) {
+//   switch(job) {
+//     case 'teacher':
+//       return firstName + ' teaches kids how to code';
+//     case 'driver':
+//       return firstName + ' drives a cab in Lisbon';
+//     case 'designer':
+//       return firstName + ' designs beautiful websites';
+//     default:
+//       return firstName + ' does something else';
+//   }
+// }
+//
+// console.log(whatDoYouDo('teacher', 'John'));
+// console.log(whatDoYouDo('designer', 'Jane'));
+// console.log(whatDoYouDo('retired', 'Mark'));
 
 
 //statement vs expressions
@@ -407,4 +407,42 @@ console.log(whatDoYouDo('retired', 'Mark'));
 // do things but do not produce an immediate values
 // if else statements
 
-//test
+
+
+/*************************************************************
+* Arrays
+*/
+//initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+//arrays are zero based. John = 0, mark = 1 ....
+console.log(names[0]);
+console.log(names);
+console.log(names.length);
+
+// mutate array
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+//different data types
+var john = ['John', 'Smith', 1990, 'designer', false];
+push adds element to the end of the array
+we will learn more  about it in future lessons
+john.push('blue');
+//unshift adds the element to the first element in the array
+john.unshift('Mr.');
+// pop removes the last element in the array
+john.pop();
+john.pop();
+// shift removes the last element in the array
+john.shift();
+console.log(john);
+
+//index of returns the 3position of the element in the array
+// will return -1 if the element isnt present in the arrays
+// helpful to test if an element is in an array
+console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
