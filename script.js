@@ -351,7 +351,7 @@ While Mikes team scored 116, 94, and 123 points.
 // console.log(ageJohn,ageMike,ageJane );
 //
 //
-//
+
 // function yearsUntilRetirement(year, firstName) {
 //   var age = calculateAge(year);
 //   var retirement = 65 - age;
@@ -366,7 +366,7 @@ While Mikes team scored 116, 94, and 123 points.
 // yearsUntilRetirement(1990, 'John');
 // yearsUntilRetirement(1948, 'Mike');
 // yearsUntilRetirement(1969, 'Jane');
-
+//
 
 
 
@@ -413,36 +413,84 @@ While Mikes team scored 116, 94, and 123 points.
 * Arrays
 */
 //initialize new array
-var names = ['John', 'Mark', 'Jane'];
-var years = new Array(1990, 1969, 1948);
-//arrays are zero based. John = 0, mark = 1 ....
-console.log(names[0]);
-console.log(names);
-console.log(names.length);
+// var names = ['John', 'Mark', 'Jane'];
+// var years = new Array(1990, 1969, 1948);
+// //arrays are zero based. John = 0, mark = 1 ....
+// console.log(names[0]);
+// console.log(names);
+// console.log(names.length);
+//
+// // mutate array
+// names[1] = 'Ben';
+// names[names.length] = 'Mary';
+// console.log(names);
+//
+// //different data types
+// var john = ['John', 'Smith', 1990, 'designer', false];
+// push adds element to the end of the array
+// we will learn more  about it in future lessons
+// john.push('blue');
+// //unshift adds the element to the first element in the array
+// john.unshift('Mr.');
+// // pop removes the last element in the array
+// john.pop();
+// john.pop();
+// // shift removes the last element in the array
+// john.shift();
+// console.log(john);
 
-// mutate array
-names[1] = 'Ben';
-names[names.length] = 'Mary';
-console.log(names);
+// //index of returns the 3position of the element in the array
+// // will return -1 if the element isnt present in the arrays
+// // helpful to test if an element is in an array
+// console.log(john.indexOf(23));
+//
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+// console.log(isDesigner);
+//
 
-//different data types
-var john = ['John', 'Smith', 1990, 'designer', false];
-push adds element to the end of the array
-we will learn more  about it in future lessons
-john.push('blue');
-//unshift adds the element to the first element in the array
-john.unshift('Mr.');
-// pop removes the last element in the array
-john.pop();
-john.pop();
-// shift removes the last element in the array
-john.shift();
-console.log(john);
+/*************************************************************
+* Codeing Challenge 3
+*/
 
-//index of returns the 3position of the element in the array
-// will return -1 if the element isnt present in the arrays
-// helpful to test if an element is in an array
-console.log(john.indexOf(23));
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48, $268.
+To tip the waiter a fair amoint , John created a simple tip calculator (as a function).
+He likes to tip 20% of the bill when the bill is less than 50, 15% when the bill is between 50 and 200,
+and 10% if the bill is more than 200.
 
-var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
-console.log(isDesigner);
+In the end, John would like to have 2 arrays:
+1) containing all three tips (one for each bill)
+2) containing all three final paid amounts (bill + tip).
+
+(NOTE: To calculate 20% of a value, simply multipy it with 20/100 = /2)
+*/
+
+// function expression
+//
+// function tipValue(bill) {
+//   var tipPercent;
+//  if (bill < 50 ) {
+//     tipPercent = .2;
+//  } else if (bill >= 50 && 200){
+//     tipPercent = .15;
+//  } else {
+//    tipPercent = .1;
+//  }
+//  return bill * tipPercent;
+// }
+//
+// var bills = [124,48,268];
+//
+// var tips = [tipValue(bills[0]),
+//             tipValue(bills[1]),
+//             tipValue(bills[2])];
+//
+// var totalBill = [bills[0] + tips[0],
+//                  bills[1] + tips[1],
+//                  bills[2] + tips[2]];
+//
+//
+// console.log(bills);
+// console.log(tips);
+// console.log(totalBill);
+//
