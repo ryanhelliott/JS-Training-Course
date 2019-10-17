@@ -465,32 +465,70 @@ In the end, John would like to have 2 arrays:
 (NOTE: To calculate 20% of a value, simply multipy it with 20/100 = /2)
 */
 
-// function expression
+
+// function tipCalc (billAmount){
+//   var percent;
 //
-// function tipValue(bill) {
-//   var tipPercent;
-//  if (bill < 50 ) {
-//     tipPercent = .2;
-//  } else if (bill >= 50 && 200){
-//     tipPercent = .15;
-//  } else {
-//    tipPercent = .1;
-//  }
-//  return bill * tipPercent;
+//   if (billAmount < 50){
+//     percent = .2;
+//   } else if (billAmount >= 50 && billAmount < 200) {
+//     percent = .15;
+//   } else {
+//     percent = .1;
+//   }
+//
+//   return billAmount * percent;
 // }
 //
-// var bills = [124,48,268];
+// var bills = [124, 48, 268];
 //
-// var tips = [tipValue(bills[0]),
-//             tipValue(bills[1]),
-//             tipValue(bills[2])];
+// var tips = [tipCalc(bills[0]),
+//             tipCalc(bills[1]),
+//             tipCalc(bills[2])];
 //
-// var totalBill = [bills[0] + tips[0],
-//                  bills[1] + tips[1],
-//                  bills[2] + tips[2]];
-//
+// var total = [bills[0] + tips[0],
+//              bills[1] + tips[1],
+//              bills[2] + tips[2] ];
 //
 // console.log(bills);
 // console.log(tips);
-// console.log(totalBill);
-//
+// console.log(total);
+
+
+
+/****************************************
+* Object and Properties
+*/
+
+// objects define key value pairs
+// can use objects to group objects that belong together with no particular order
+// arrays - order matters
+// objects - order doesnt matters
+
+// Object Literal
+var john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  birthYear: 1990,
+  family: ['Jane', 'Mark', 'Bob', 'Emily'],
+  job: 'Teacher',
+  isMarried: false
+};
+
+console.log(john);
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// New object syntax
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
