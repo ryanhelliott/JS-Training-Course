@@ -582,7 +582,7 @@ john.calcBMI();
 
 var mark = {
   fullName: 'Mark Thomson',
-  mass: 5, //kg
+  mass: 105, //kg
   height: 5, //m
   calcBMI: function() {
     this.bmi = this.mass / (this.height * this.height);
@@ -590,5 +590,15 @@ var mark = {
 };
 mark.calcBMI();
 
+
  console.log(john.bmi);
  console.log(mark.bmi);
+
+
+if (john.bmi > mark.bmi) {
+  console.log('John has a higher BMI of: ' + john.bmi);
+} else if (mark.bmi > john.bmi) {
+ console.log('Mark has a higher BMI of: ' + mark.bmi);
+} else {
+  console.log('Its a draw, everyone gets a trophy');
+}
