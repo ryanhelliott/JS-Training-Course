@@ -569,36 +569,83 @@ remember: BMI = mass / height ^2 = mass / (height * height). mass in kg and heig
 
 */
 
+//
+// var john = {
+//   fullName: 'John Smith',
+//   mass: 10, //kg
+//   height: 2, //m
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+//
+//
+// var mark = {
+//   fullName: 'Mark Thomson',
+//   mass: 105, //kg
+//   height: 5, //m
+//   calcBMI: function() {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   }
+// };
+//
+//  console.log(john.bmi);
+//  console.log(mark.bmi);
+//
+//
+// if (john.calcBMI() > mark.calcBMI() ) {
+//   console.log('John has a higher BMI of: ' + john.bmi);
+// } else if (mark.bmi > john.bmi) {
+//  console.log('Mark has a higher BMI of: ' + mark.bmi);
+// } else {
+//   console.log('Its a draw, everyone gets a trophy');
+// }
 
-var john = {
-  fullName: 'John Smith',
-  mass: 10, //kg
-  height: 2, //m
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-};
+
+/****************************************
+* Loops and Iterations
+*/
+// for loop
+// for (var i = 0; i <= 20 ; i += 2 ){
+//   console.log(i);
+// }
+//
+// // i = 0, 0 < 10 true, log I to console, i ++
+// // i = 1, 1 < 10 true, log i to console, i ++
+// //...
+// // i = 9, 9 < 10 true, log i to console, i ++
+// // i = 10, 10 < 10 false, exit the loop
+//
+// // log all items of an array
+// var john = ['John', 'Smith', 1990, 'designer', false];
+// for (var i = 0; i < john.length; i ++) {
+//   console.log(john[i]);
+// }
+//
+// // while loop
+// var i = 0;
+// while (i < john.length) {
+//     console.log(john[i]);
+//     i++;
+// }
+
+// continue and break statements
+// continue the loop but dont print the array variables that arent strings
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+// for (var i = 0; i < john.length; i ++) {
+//   if (typeof john[i] !== 'string') continue;
+//   console.log(john[i]);
+// }
+// //once you hit an array variable that isnt a string, exit the loop entirely
+// for (var i = 0; i < john.length; i ++) {
+//   if (typeof john[i] !== 'string') break;
+//   console.log(john[i]);
+// }
 
 
-var mark = {
-  fullName: 'Mark Thomson',
-  mass: 105, //kg
-  height: 5, //m
-  calcBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
-};
-
- console.log(john.bmi);
- console.log(mark.bmi);
-
-
-if (john.calcBMI() > mark.calcBMI() ) {
-  console.log('John has a higher BMI of: ' + john.bmi);
-} else if (mark.bmi > john.bmi) {
- console.log('Mark has a higher BMI of: ' + mark.bmi);
-} else {
-  console.log('Its a draw, everyone gets a trophy');
+// looping backwards
+for (var i = john.length - 1; i >= 0; i--) {
+  console.log(john[i]);
 }
