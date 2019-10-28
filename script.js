@@ -576,9 +576,10 @@ var john = {
   height: 2, //m
   calcBMI: function() {
     this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   }
 };
-john.calcBMI();
+
 
 var mark = {
   fullName: 'Mark Thomson',
@@ -586,16 +587,15 @@ var mark = {
   height: 5, //m
   calcBMI: function() {
     this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   }
 };
-mark.calcBMI();
-
 
  console.log(john.bmi);
  console.log(mark.bmi);
 
 
-if (john.bmi > mark.bmi) {
+if (john.calcBMI() > mark.calcBMI() ) {
   console.log('John has a higher BMI of: ' + john.bmi);
 } else if (mark.bmi > john.bmi) {
  console.log('Mark has a higher BMI of: ' + mark.bmi);
