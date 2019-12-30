@@ -89,14 +89,14 @@ variable mutation and type coercion
 // console.log(average);
 //
 // // multiple assignments
-// var x , y;
-// x = y = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 26
-// console.log(x, y);
-//
-// // more operators
+var x , y;
+x = y = (3 + 5) * 4 - 6; //8 * 4 - 6 // 32 - 6 // 26
+console.log(x, y);
+
+// more operators
 // x *= 2;
 // console.log(x);
-//
+
 // x += 10 ;
 // console.log(x);
 //
@@ -265,14 +265,14 @@ BMI = mass / height^2 = mass / (height * height).
 // falsy values: undefined, null, 0 , '', NaN (not a number)
 // truthy values: all values that are not falsy
 
-// var height;
-// height = 23;
-//
-// if (height || height === 0 ) {
-//   console.log('Variable is defined');
-// } else {
-//   console.log('Variable has not been defined');
-// }
+var height;
+ height = 0;
+
+if (height || height === 0 ) {
+  console.log('Variable is defined');
+} else {
+  console.log('Variable has not been defined');
+}
 //
 // // equality operators
 //
@@ -373,12 +373,12 @@ While Mikes team scored 116, 94, and 123 points.
 /*************************************************************
 * Function statements and Expressions
 */
-
-//function declaration
+//
+// // function declaration
 // function whatDoYouDo (job, firstName){}
-
-
-//function expression
+//
+//
+// // function expression
 // var whatDoYouDo = function(job, firstName) {
 //   switch(job) {
 //     case 'teacher':
@@ -395,7 +395,7 @@ While Mikes team scored 116, 94, and 123 points.
 // console.log(whatDoYouDo('teacher', 'John'));
 // console.log(whatDoYouDo('designer', 'Jane'));
 // console.log(whatDoYouDo('retired', 'Mark'));
-
+//
 
 //statement vs expressions
 // expressions are peices of code that always return a single result
@@ -659,7 +659,7 @@ for (var i = john.length - 1; i >= 0; i--) {
 Remember the tip calculator challenge? Lets create a more advanced version
 using everything we've learned!
 
-This time, john and his family went to 5 differnet restuarnts. The bills w2ere
+This time, john and his family went to 5 differnet restuarnts. The bills were
 $124, $48, $268, $180 and $42.
 John likes to tip 20% of the bill when the bill is less than %50, 15% when the
 bill is between %50 and $200 and 10% if the bill is more than $200/
@@ -667,10 +667,11 @@ bill is between %50 and $200 and 10% if the bill is more than $200/
 Implement a tip calculator using objects and loops:
 1. Create an object with an array for the bill values
 2. Add a method to calculate the tip
-3. This method should include a lioop to iterate over all the paid bills and do the eip calculations
-4. As an output, create1) a new array containing all tips, and 2) an array containing final paid
-amounts (bill + tip). Hint: Start with two empty arrays []as properties and then fill them
-up in the loop.
+3. This method should include a loop to iterate over all the paid bills and do the tip calculations
+4. As an output, create
+  1) a new array containing all tips, and
+  2) an array containing final paid amounts (bill + tip).
+Hint: Start with two empty arrays [] as properties and then fill them up in the loop.
 
 EXTRA AFTER FINISHING: Mark's family also went on a holiday, going to 4 different restaurants.
 The bills were $77, $375, $110, and $45.
