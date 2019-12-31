@@ -505,7 +505,7 @@ In the end, John would like to have 2 arrays:
 // arrays - order matters
 // objects - order doesnt matters
 
-// Object Literal
+// // Object Literal
 // var john = {
 //   firstName: 'John',
 //   lastName: 'Smith',
@@ -537,7 +537,7 @@ In the end, John would like to have 2 arrays:
 * Object and Methods
 */
 
-// Object Literal
+// // Object Literal
 // var john = {
 //     firstName: 'John',
 //     lastName: 'Smith',
@@ -633,7 +633,7 @@ remember: BMI = mass / height ^2 = mass / (height * height). mass in kg and heig
 
 // continue and break statements
 // continue the loop but dont print the array variables that arent strings
-var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+// var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 // for (var i = 0; i < john.length; i ++) {
 //   if (typeof john[i] !== 'string') continue;
 //   console.log(john[i]);
@@ -645,10 +645,10 @@ var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 // }
 
 
-// looping backwards
-for (var i = john.length - 1; i >= 0; i--) {
-  console.log(john[i]);
-}
+// // looping backwards
+// for (var i = john.length - 1; i >= 0; i--) {
+//   console.log(john[i]);
+// }
 
 
 /****************************************
@@ -659,7 +659,7 @@ for (var i = john.length - 1; i >= 0; i--) {
 Remember the tip calculator challenge? Lets create a more advanced version
 using everything we've learned!
 
-This time, john and his family went to 5 differnet restuarnts. The bills were
+This time, john and his family went to 5 differnet restaurants. The bills were
 $124, $48, $268, $180 and $42.
 John likes to tip 20% of the bill when the bill is less than %50, 15% when the
 bill is between %50 and $200 and 10% if the bill is more than $200/
@@ -687,3 +687,46 @@ have the sum of the array, divide it by the number of elements in it ( thats how
 8. Log the console which family paid the highest tips on average
 
 */
+
+
+// Object Literal
+var john = {
+  fullName: 'John Smith',
+  billAmount: [124,48, 268, 180, 42],
+  calcTip: function() {
+//calculate tip amount based on bill amount
+      this.tipAmount = [];
+      this.totalAmount = [];
+
+      for(var i = 0; i < this.billAmount.length; i++) {
+        //this.billAmount[i] * x; x is variable dependent on what the bill amount is. Create an if else statement for the percentage
+        var percentage;
+        var billAmount = this.billAmount[i]
+
+        if(billAmount < 50 ) {
+          percentage = .2;
+        } else if (billAmount >= 50 && billAmount < 200) {
+          percentage = .15;
+        } else {
+          percentage = .1;
+        }
+
+        this.tipAmount[i] = billAmount * percentage;
+        this.totalAmount[i] = billAmount + (billAmount * percentage);
+      }
+    }
+}
+
+john.calcTip();
+console.log(john)
+
+
+
+
+
+
+
+
+
+
+    // function tipCalc (billAmount){
